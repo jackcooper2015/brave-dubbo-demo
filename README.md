@@ -9,12 +9,6 @@
             <artifactId>brave-dubbo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-
-        <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave-spancollector-http</artifactId>
-            <version>3.9.0</version>
-        </dependency>
 ```
 
 ## 2. 配置brave-dubbo.xml文件

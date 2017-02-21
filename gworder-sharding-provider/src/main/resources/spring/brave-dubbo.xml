@@ -5,8 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
      <bean id="brave" class="com.github.kristofa.brave.dubbo.BraveFactoryBean" p:serviceName="provider" p:spanCollector-ref="httpSpanCollector" />
-     <bean id="defaultSpanNameProvider" class="com.github.kristofa.brave.dubbo.support.DefaultSpanNameProvider" />
-     <bean id="dubboStringServiceNameProvider" class="com.github.kristofa.brave.dubbo.support.DefaultServerNameProvider" />
 
      <bean id="httpSpanCollector" class="com.github.kristofa.brave.http.HttpSpanCollector" factory-method="create">
           <constructor-arg type="java.lang.String" value="http://10.168.16.111:9411/" />
