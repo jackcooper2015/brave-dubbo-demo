@@ -9,6 +9,7 @@ target/
 .settings/
 .classpath
 .project
+log/
 
 # jrebel #
 src/main/resources/rebel.xml
