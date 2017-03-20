@@ -4,13 +4,6 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-     <bean id="brave" class="com.github.kristofa.brave.dubbo.BraveFactoryBean" p:serviceName="provider" p:spanCollector-ref="httpSpanCollector" />
-
-     <bean id="httpSpanCollector" class="com.github.kristofa.brave.http.HttpSpanCollector" factory-method="create">
-          <constructor-arg type="java.lang.String" value="http://10.168.16.111:9411/" />
-          <constructor-arg type="com.github.kristofa.brave.SpanCollectorMetricsHandler" ref="testMetricsHander" />
-     </bean>
-
-     <bean id="testMetricsHander" class="com.github.kristofa.brave.EmptySpanCollectorMetricsHandler" />
+     <bean id="brave" class="com.github.kristofa.brave.dubbo.BraveFactoryBean" p:serviceName="serviceName" p:zipkinHost="http://10.168.16.111:9411/" p:rate="1.0" />
 
 </beans>
